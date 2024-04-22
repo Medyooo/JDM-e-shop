@@ -6,7 +6,7 @@ const morgan = require("morgan");
 
 dotenv.config({ path: "config.env" });
 const DbConnection = require("./src/config/DbConnections");
-const ApiError = require("./Utils/ApiError");
+const ApiError = require("./utils/ApiError");
 const GlobalError = require("./src/middlewares/ErrorMiddleware");
 const MountRoutes = require("./src/routes/Index")
 
