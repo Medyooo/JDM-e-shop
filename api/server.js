@@ -1,13 +1,16 @@
 const path = require("path");
 
-const express = require("express");
-const dotenv = require("dotenv");
-const morgan = require("morgan");
+const express = require("express")
+const dotenv = require("dotenv")
+const morgan = require("morgan")
+const cors = require("cors")
+const compression = require('compression')
 
-dotenv.config({ path: "config.env" });
-const DbConnection = require("./src/config/DbConnections");
-const ApiError = require("./Utils/ApiError");
-const GlobalError = require("./src/middlewares/ErrorMiddleware");
+
+dotenv.config({ path: "config.env" })
+const DbConnection = require("./src/config/DbConnections")
+const ApiError = require("./utils/ApiError")
+const GlobalError = require("./src/middlewares/ErrorMiddleware")
 const MountRoutes = require("./src/routes/Index")
 
 //Connect with Db
@@ -15,6 +18,13 @@ DbConnection();
 
 // express App
 const App = express();
+
+// Enable other Dns to access the application
+App.use(cors())
+App.options('*', cors())
+
+// compress all responses
+App.use(compression())
 
 //Middlewares
 App.use(express.json());
