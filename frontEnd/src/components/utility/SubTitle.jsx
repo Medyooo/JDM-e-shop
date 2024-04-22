@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const SubTitle = ({ title, btntitle, pathText }) => {
   return (
-    <div className='d-flex justify-content-between pt-4'>
+    <div className='d-flex justify-content-between pt-4 mt-3 mb-2'>
       <div className='sub-title'>{title}</div>
       {btntitle
         ? (

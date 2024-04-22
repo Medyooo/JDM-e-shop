@@ -7,7 +7,7 @@ const CartItem = () => {
     <Col xs='12' className='cart-item-body my-2 d-flex pt-2 mt-4  '>
       <img width='160px' height='197px' src={prod} alt='' />
       <div className='w-100 mx-3'>
-        <Row className='justify-content-between '>
+        <Row className='justify-content-between  align-items-center py-2'>
           <Col sm='12' className=' d-flex flex-row justify-content-between'>
             <div className='d-inline pt-2 cat-text'>Nom de la category</div>
             <div className='d-flex pt-2 ' style={{ cursor: 'pointer' }}>
@@ -16,8 +16,8 @@ const CartItem = () => {
             </div>
           </Col>
         </Row>
-        <Row className='justify-content-center mt-2'>
-          <Col sm='12' className=' d-flex flex-row justify-content-start'>
+        <Row className='d-flex flex-row justify-content-center align-items-center '>
+          <Col sm='12' className=' d-flex flex-row  align-items-center'>
             <div className='d-inline pt-2 cat-title'>
               Title Title Title
 
@@ -32,25 +32,21 @@ const CartItem = () => {
           </Col>
         </Row>
         <Row>
-          <Col sm='12' className='mt-2 d-flex'>
-            <div
-              className='color ms-2 border'
-              style={{ backgroundColor: 'brown' }}
-            />
-          </Col>
+          <Col sm='12' className='mt-2 d-flex' />
         </Row>
 
         <Row className='justify-content-between mt-2'>
           <Col sm='12' className=' d-flex flex-row justify-content-between'>
             <div className='d-inline pt-2 d-flex'>
-              <div className='cat-text  d-inline'>Quantitée</div>
+              <div className='cat-text d-inline'>Quantitée :</div>
               <input
                 className='mx-2 '
                 type='number'
+                defaultValue={1}
                 style={{ width: '40px', height: '25px' }}
               />
             </div>
-            <div className='d-inline pt-2 barnd-text'>28.99 EUR</div>
+            <div className='d-inline pt-2 barnd-text'>28.99 €</div>
           </Col>
         </Row>
       </div>

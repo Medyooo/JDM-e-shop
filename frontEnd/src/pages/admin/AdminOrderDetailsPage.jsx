@@ -6,7 +6,7 @@ import AdminOrderDetails from '../../components/admin/AdminOrderDetails'
 const AdminOrderDetailsPage = () => {
   return (
     <Container>
-      <Row className='py-3'>
+      <Row className='py-3 mt-5 mb-5'>
         <Col sm='3' xs='3' md='2'>
           <AdminSideBar />
         </Col>

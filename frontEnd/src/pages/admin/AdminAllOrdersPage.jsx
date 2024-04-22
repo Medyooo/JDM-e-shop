@@ -7,7 +7,7 @@ import Pagination from '../../components/utility/Pagination'
 const AdminAllOrdersPage = () => {
   return (
     <Container>
-      <Row className='py-3'>
+      <Row className='py-3 mt-5 mb-5'>
         <Col sm='3' xs='3' md='2'>
           <AdminSideBar />
         </Col>

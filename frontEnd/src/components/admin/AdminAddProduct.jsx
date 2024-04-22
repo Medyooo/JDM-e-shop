@@ -2,7 +2,6 @@ import { Col, Row } from 'react-bootstrap'
 import Multiselect from 'multiselect-react-dropdown'
 
 import avatar from '../../assets/images/avatar.png'
-import add from '../../assets/images/add.png'
 
 const AdminAddProduct = () => {
   const OnSelect = () => {
@@ -74,22 +73,7 @@ const AdminAddProduct = () => {
             <option value='val2'>Marque 2</option>
             <option value='val2'>Marque 3</option>
           </select>
-          <div className='text-form mt-3 '>Les couleurs disponible</div>
-          <div className='mt-1 d-flex'>
-            <div
-              className='color ms-2 border  mt-1'
-              style={{ backgroundColor: '#E52C2C' }}
-            />
-            <div
-              className='color ms-2 border mt-1 '
-              style={{ backgroundColor: 'white' }}
-            />
-            <div
-              className='color ms-2 border  mt-1'
-              style={{ backgroundColor: 'black' }}
-            />
-            <img src={add} alt='' width='30px' height='35px' className='' />
-          </div>
+
         </Col>
       </Row>
       <Row>

@@ -6,7 +6,7 @@ import UserAddAddress from '../../components/user/UserAddAddress'
 const UserAddAddressPage = () => {
   return (
     <Container>
-      <Row className='py-3'>
+      <Row className='py-3 mt-5'>
         <Col sm='3' xs='2' md='2'>
           <UserSideBar />
         </Col>

@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 import favoff from '../../assets/images/fav-off.png'
 import rate from '../../assets/images/rate.png'
-import prod from '../../assets/images/prod.png'
 
-const ProductCard = () => {
+const ProductCard = ({ prod }) => {
   return (
     <Col xs='6' sm='6' md='4' lg='3' className='d-flex '>
 
@@ -37,7 +36,7 @@ const ProductCard = () => {
         <Card.Body>
           <Card.Title>
             <div className='card-title'>
-              Gold Standard Whey
+              Tajine Marocain
             </div>
           </Card.Title>
           <Card.Text>
@@ -54,7 +53,7 @@ const ProductCard = () => {
               </div>
               <div className='d-flex'>
                 <div className='card-price'>24,99</div>
-                <div className='card-currency mx-1'>$</div>
+                <div className='card-currency mx-1 '>€</div>
               </div>
             </div>
           </Card.Text>

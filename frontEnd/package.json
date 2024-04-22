@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@blacklab/react-image-magnify": "^4.1.1",
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -15,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.2",
+    "mdb-react-ui-kit": "^8.0.0",
     "multiselect-react-dropdown": "^2.0.25",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",

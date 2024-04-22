@@ -140,10 +140,11 @@ body {
   .card-title {
     color: #555550;
     font-family: 'Lato';
-    font-size: 16px;
-    letter-spacing: 0;
+    font-size: 18px;
+    letter-spacing: 1;
     line-height: 20px;
-    text-align: right;
+    font-weight: bold;
+    
   }
   .card-price {
     color: #E06B01;
@@ -331,7 +332,7 @@ margin-right:-15px;
     color: #E06B01;
     font-family: 'Poppins', sans-serif;
     font-family: 'Satisfy', cursive;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     letter-spacing: 0;
     line-height: 23px;

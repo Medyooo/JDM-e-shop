@@ -35,13 +35,13 @@ const AdminAllProductsCard = () => {
             </Card.Title>
             <Card.Text>
               <div className='d-flex justify-content-between'>
-                <div className='card-rate'><img
-                  className=''
+                <div className=' mt-1 card-rate'><img
+                  className='my-1'
                   src={rate}
                   alt='rate'
                   height='16px'
                   width='16px'
-                                           /><p className='d-inline m-1 '>4.5</p>
+                                                 /><p className='d-inline mx-1   '>4.5</p>
                 </div>
                 <div className='d-flex'>
                   <div className='card-price mx-1 '>28,99</div>

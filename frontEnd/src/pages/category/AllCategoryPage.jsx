@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import CategoryContainer from '../../components/category/CategoryContainer'
 import Pagination from '../../components/utility/Pagination'

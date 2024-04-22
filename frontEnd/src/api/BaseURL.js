@@ -1,5 +1,5 @@
 import axios from 'axios'
 
-const baseUrl = axios.create({ BaseURL: 'https://jdm-e-shop-api-892eb8eb5020.herokuapp.com' })
+const baseUrl = axios.create({ baseURL: 'https://jdm-e-shop-project-api-1afcc5b51765.herokuapp.com' })
 
 export default baseUrl

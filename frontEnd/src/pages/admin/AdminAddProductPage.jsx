@@ -6,7 +6,7 @@ import AdminAddProduct from '../../components/admin/AdminAddProduct'
 const AdminAddProductPage = () => {
   return (
     <Container>
-      <Row className='py-3'>
+      <Row className='py-3 mt-5 mb-5'>
         <Col sm='3' xs='2' md='2'>
           <AdminSideBar />
         </Col>

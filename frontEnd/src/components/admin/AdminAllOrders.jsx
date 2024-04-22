@@ -10,7 +10,7 @@ const AdminAllOrders = () => {
         <AdminAllOrdersCard />
         <AdminAllOrdersCard />
         <AdminAllOrdersCard />
-        <AdminAllOrdersCard />
+
       </Row>
     </div>
   )

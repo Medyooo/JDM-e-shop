@@ -10,7 +10,7 @@ const BrandCard = ({ img }) => {
       className='my-2 d-flex justify-content-center'
     >
       <Card
-        className='my-1'
+        className='my-1 mt-4 '
         style={{
           width: '100%',
           height: '151px',
