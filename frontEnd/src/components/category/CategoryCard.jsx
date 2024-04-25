@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap'
 const CategoryCard = ({ background, img, title }) => {
   return (
     <Col
-      className='my-4 d-flex justify-content-center  align-items-center '
+      className='my-4 d-flex  justify-content-center  align-items-center'
       xs='6'
       sm='6'
       md='4'
