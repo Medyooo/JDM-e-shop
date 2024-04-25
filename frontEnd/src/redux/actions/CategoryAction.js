@@ -1,14 +1,15 @@
 import { GET_ALL_CATEGORY, GET_ERROR } from '../Type'
 
-import BaseUrl from '../../api/BaseURL'
+import useGetData from '../../hooks/UseGetData'
 
 export const GetAllCategory = () => async (dispatch) => {
   try {
-    const res = await BaseUrl.get('/api/v1/categories')
-
+    // const res = await BaseUrl.get('/api/v1/categories')
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const response = await useGetData('/api/v1/categories')
     dispatch({
       type: GET_ALL_CATEGORY,
-      payload: res.data
+      payload: response
     })
   } catch (e) {
     dispatch({
