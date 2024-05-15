@@ -8,18 +8,22 @@ const Factory = require("./HandlersFactory");
 // @desc Create cash order
 // @route POST /api/v1/orders/cartId
 // @acces Protected/User
+
 exports.createCashOrder = AsyncHandler(async (req, res, next) => {
+  
  // 1- Get cart depend on cartId
  const cart = await CartModel.findById(req.params.cartId);
  if (!cart) {
     return next(new ApiError(`There is no cart with this id : ${req.params.cartId}`),404);
  }
+
  // 2- Get order price depend on cart price "Check if coupon applied"
  const cartPrice = cart.totalPriceAfterDiscount 
    ? cart.totalPriceAfterDiscount
    : cart.totalCartPrice;
 
  const totalOrderPrice = cartPrice 
+
  // 3- Create order with default paymentMethodType cash
   const order = await OrderModel.create({
     user: req.user._id,
@@ -27,6 +31,7 @@ exports.createCashOrder = AsyncHandler(async (req, res, next) => {
     shippingAddress: req.body.shippingAddress,
     totalOrderPrice,
   })
+
  // 4- After creating order decrement product quantity, increment product quantity in stock
    if(order){
      const bulkOption = cart.cartItems.map((item) => ({
@@ -36,6 +41,7 @@ exports.createCashOrder = AsyncHandler(async (req, res, next) => {
         }
       }));
        await ProductModel.bulkWrite(bulkOption, {})
+
      // 5- Clear cart depend on cartId
      await CartModel.findByIdAndDelete(req.params.cartId);
  }

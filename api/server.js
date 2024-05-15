@@ -10,7 +10,7 @@ const ApiError = require("./utils/ApiError");
 const GlobalError = require("./src/middlewares/ErrorMiddleware");
 const MountRoutes = require("./src/routes/Index")
 
-//Connect with Db
+//Connect with Data Base
 DbConnection();
 
 // express App

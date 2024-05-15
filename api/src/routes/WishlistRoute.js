@@ -12,7 +12,4 @@ router.post("/", AuthService.AllowedTo('user'), AddProductToWishlist).get("/", G
 
 router.delete("/:productId", AuthService.AllowedTo('user'), RemoveProductFromWishlist)
 
-
-
-
 module.exports = router;

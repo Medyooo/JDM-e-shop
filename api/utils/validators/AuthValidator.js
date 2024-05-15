@@ -44,7 +44,7 @@ exports.SignUpValidator = [
     .notEmpty()
     .withMessage("Password confirmation is required"),
 
-  ValidatorMiddleware,
+  ValidatorMiddleware
 ];
 
 exports.LogInValidator = [

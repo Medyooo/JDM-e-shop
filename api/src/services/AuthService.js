@@ -33,18 +33,17 @@ exports.SignUp = asyncHandler (async (req, res, next) => {
 // @route GET /api/v1/auth/login
 // @acces public
 exports.LogIn = asyncHandler(async (req, res, next) => {
-    //1- check if password and email are in body
-    //2- check if user exists & password is correct
+    //1- check if user exists & password is correct
     const user = await UserModel.findOne({ email: req.body.email})
 
     if(!user || !(await bcrypt.compare(req.body.password, user.password))){
 
         return next(new ApiError("Incorrect email or password"));
     }
-    //3- generate Token
+    //2- generate Token
     const token = CreateToken(user._id);
 
-    //4- send response to client side
+    //3- send response to client side
     res.status(201).json({data: user, token})
 });
 
@@ -54,14 +53,12 @@ exports.Protect = asyncHandler (async (req, res, next) => {
     let token;
     if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
          token = req.headers.authorization.split(' ')[1];
-        console.log(token);
     }
     if (!token){
         return next(new ApiError('You are not login, please login to get acces this route'))
     }
     //2- verify token (no change happens, expired token )
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-     console.log(decoded);
     //3- check if user exists
     const user = await UserModel.findById(decoded.userId);
     if(!user){
@@ -70,7 +67,6 @@ exports.Protect = asyncHandler (async (req, res, next) => {
     //4- check if user change his password after token created
     if (user.passwordChangedAt){
         const passChangedTimestamp = parseInt(user.passwordChangedAt.getTime() / 1000, 10) ;
-        console.log(passChangedTimestamp, decoded.iat)
         
         if (passChangedTimestamp > decoded.iat) {
         return next( new ApiError('User recently changed his password. Please login again..'))
@@ -82,14 +78,11 @@ exports.Protect = asyncHandler (async (req, res, next) => {
 
 //@desc  Authorization (User Permissions)
 exports.AllowedTo = (...roles) => asyncHandler( async (req, res, next) => {
-    //1-acces roles
-    //2- acces registered user (req.user.role)
+    // acces registered user (req.user.role)
     if(!roles.includes(req.user.role)){
         return next(new ApiError("Not allowed to access this route",403));
     }
-
     next();
-
 })
 
 // @desc ForgotPassword
