@@ -9,19 +9,18 @@ const AllCategoryPage = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(GetAllCategory())
+    dispatch(GetAllCategory(6))
   }, [])
 
-  const data = useSelector(state => state.allCategory.category)
+  const category = useSelector(state => state.allCategory.category)
   const loading = useSelector(state => state.allCategory.loading)
 
-  console.log(data)
-  console.log(loading)
-
+  let pageCount = 0
+  if (category.paginationResult) { pageCount = category.paginationResult.numberOfPages }
   return (
     <div style={{ minHeight: '670px' }}>
-      <CategoryContainer />
-      <Pagination />
+      <CategoryContainer data={category.data} loading={loading} />
+      <Pagination pageCount={pageCount} />
     </div>
   )
 }

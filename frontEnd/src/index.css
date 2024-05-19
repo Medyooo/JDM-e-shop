@@ -4,6 +4,78 @@ body {
     
    
   }
+  .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
   .nav{
     object-fit: cover;
   }
@@ -62,19 +134,35 @@ body {
   }
   .sub-title {
     color: #E06B01;
-    font-family: 'Poppins', sans-serif;
     font-family: 'Satisfy', cursive;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
     letter-spacing: 0;
     line-height: 36px;
   }
-  
+
+  .imgSlider {
+    filter: brightness(50%);
+  }
+
   .slider-background {
-    background: linear-gradient(173.68deg, #ffedf5 0%, #ffd5e7 100%);
+    background-color: #E06B01;
     height: auto;
     width: 100vw;
-    
+  }
+  .sliderTitle {
+    color: #fff;
+    font-family: 'Satisfy', cursive;
+    font-size: 48px;
+    padding-left: 15px;
+  }
+  .sliderSubTitle {
+    color: #fff;
+    font-size: 18px;
+    padding-left: 10px;
+    width:80%;
+    text-align: center;
+
   }
   .slider-background2 {
     background: linear-gradient(174.76deg, #d3deff 0%, #a8baff 100%);
@@ -129,8 +217,8 @@ body {
   }
   .categoty-card-text {
     color: #555550;
-    font-family: Almarai;
-    font-size: 18px;
+    font-family: 'Roboto';
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
   }
@@ -139,12 +227,11 @@ body {
   
   .card-title {
     color: #555550;
-    font-family: 'Lato';
-    font-size: 18px;
+    height: 72px;
+    font-family: 'Roboto';
+    font-size: 16px;
     letter-spacing: 1;
-    line-height: 20px;
-    font-weight: bold;
-    
+    line-height: 20px;    
   }
   .card-price {
     color: #E06B01;
@@ -177,7 +264,6 @@ body {
     width: 110px;
     font-size: 20px;
     color: #4a2200;
-    font-family: 'Poppins', sans-serif;
     font-family: 'Satisfy', cursive;
     text-decoration: none;
     text-align: center;
@@ -249,7 +335,6 @@ body {
   /* card filter style */
   .search-count-text {
     color: #4a2200;
-    font-family: 'Poppins', sans-serif;
     font-family: 'Satisfy', cursive;
     font-size: 20px;
     font-weight: bold;
@@ -330,14 +415,14 @@ margin-right:-15px;
 
   .cat-text {
     color: #E06B01;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Latto', sans-serif;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 0;
     line-height: 23px;
    
   }
+ 
   
   .cat-title {
     color: #4a2200;
@@ -405,7 +490,6 @@ margin-right:-15px;
     border-color: #E06B01;
     background-color: #E06B01;
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
     font-family: 'Satisfy', cursive;
     font-size: 22px;
     font-weight: normal;
@@ -505,7 +589,6 @@ margin-right:-15px;
   /* cart page */
   .cart-title {
     color: #E06B01;
-    font-family: 'Poppins', sans-serif;
     font-family: 'Satisfy', cursive;
     font-size: 32px;
     font-weight: 800;

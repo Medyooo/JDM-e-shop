@@ -5,29 +5,19 @@ function Footer () {
   return (
     <MDBFooter className='footer-background text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom '>
-        <div className='me-5 d-none d-lg-block'>
-          <span>Get connected with us on social networks:</span>
-        </div>
+        <div className='me-5 d-none d-lg-block' />
 
         <div>
-          <a href='' className='me-4 text-reset'>
+          <a href='/' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='facebook-f' />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='twitter' />
-          </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='/' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='google' />
           </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='/' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='instagram' />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='linkedin' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='github' />
-          </a>
+
         </div>
       </section>
 
@@ -43,49 +33,57 @@ function Footer () {
             </MDBCol>
 
             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Horaire d'ouverture</h6>
+              <p className='fw-bold'>
+                Du Dimanche au Jeudi
+              </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  Le midi de 11h00 à 16h00
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  React
+                  Le soir de 19h00 à 21h30
+
+                </a>
+              </p>
+              <p className='fw-bold'>
+                Les Vendredis et Samedis
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                  Le midi de 11h00 à 16h00
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Laravel
+                  Le soir de 19h00 à 23h00
+
                 </a>
               </p>
             </MDBCol>
 
             <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Liens</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Pricing
+                  Boutique et Souk
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Settings
+                  Le restaurant
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Orders
+                  Les menus
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Help
+                  Contact
                 </a>
               </p>
             </MDBCol>
@@ -94,18 +92,16 @@ function Footer () {
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
                 <MDBIcon color='secondary' icon='home' className='me-2' />
-                New York, NY 10012, US
+                26 Rue Marie Curie, <br />44230 Saint Sébastien sur Loire
               </p>
               <p>
                 <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                info@example.com
+                contact@lesjardinsdumaroc.com
               </p>
               <p>
-                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
+                <MDBIcon color='secondary' icon='phone' className='me-3' /> 02 40 56 75 75
               </p>
-              <p>
-                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
-              </p>
+
             </MDBCol>
           </MDBRow>
         </MDBContainer>

@@ -11,7 +11,7 @@ const PaymentMethod = () => {
               name='group'
               id='group1'
               type='radio'
-              value='الدفع عن طريق الفيزا'
+              value='Paiement avec la carte bancaire'
               className='mt-2'
             />
             <label className='mx-2' for='group1'>

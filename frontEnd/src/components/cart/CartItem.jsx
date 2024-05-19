@@ -27,7 +27,7 @@ const CartItem = () => {
         </Row>
         <Row>
           <Col sm='12' className='mt-3'>
-            <div className='cat-text d-inline'>Marque :</div>
+            <div className='cat-text d-inline roboto-medium '>Marque :</div>
             <div className='barnd-text d-inline mx-1'>Sultan </div>
           </Col>
         </Row>

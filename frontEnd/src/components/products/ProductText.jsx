@@ -4,7 +4,7 @@ const ProductText = () => {
   return (
     <div className='mx-5 px-4 '>
       <Row className='mt-2'>
-        <div className='cat-text'>Nom de category :</div>
+        <div className='cat-text'>Nom de category</div>
       </Row>
       <Row>
         <Col md='8' className='mt-3'>
@@ -19,27 +19,11 @@ const ProductText = () => {
           <div className='barnd-text d-inline mx-1'>Sultan </div>
         </Col>
       </Row>
-      <Row>
-        <Col md='8' className='mt-3 d-flex'>
-          <div
-            className='color ms-2 border'
-            style={{ backgroundColor: '#4a2200' }}
-          />
-          <div
-            className='color ms-2 border '
-            style={{ backgroundColor: 'white' }}
-          />
-          <div
-            className='color ms-2 border'
-            style={{ backgroundColor: 'silver' }}
-          />
-        </Col>
-      </Row>
 
       <Row className='mt-4'>
         <div className='cat-text'>Description :</div>
       </Row>
-      <Row className='mt-4'>
+      <Row className='mt-2'>
         <Col md='10'>
           <div className='product-description d-inline'>
             Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description Text description              Text description

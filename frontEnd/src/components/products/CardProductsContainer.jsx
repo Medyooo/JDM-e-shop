@@ -10,10 +10,10 @@ const CardProductsContainer = ({ title, btntitle, pathText }) => {
     <Container>
       <SubTitle title={title} btntitle={btntitle} pathText={pathText} />
       <Row>
-        <ProductCard prod={prod1} />
-        <ProductCard prod={prod2} />
-        <ProductCard prod={prod1} />
-        <ProductCard prod={prod1} />
+        <ProductCard prodImg={prod1} prodName='Tajine en Céramique Artisanale Marocaine' prodRate={4.3} price={28.98} />
+        <ProductCard prodImg={prod2} prodName='Tapis Berbère Authentique en Laine - Motifs Traditionnels Marocains' prodRate={4.7} price={249.98} />
+        <ProductCard prodImg={prod1} prodName='Tajine en Céramique Artisanale Marocaine' prodRate={4.3} price={28.98} />
+        <ProductCard prodImg={prod1} prodName='Tajine en Céramique Artisanale Marocaine' prodRate={4.3} price={28.98} />
 
       </Row>
     </Container>
