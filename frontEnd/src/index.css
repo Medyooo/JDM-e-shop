@@ -697,6 +697,11 @@ margin-right:-15px;
     line-height: 20px;
     
   }
+  #upload-photo {
+    opacity :0;
+    position: absolute;
+    z-index: -1;
+  }
   .input-form {
     height: 37px;
     width: 100%;
