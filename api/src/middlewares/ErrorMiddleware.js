@@ -32,8 +32,4 @@ const GlobalError = (err, req, res, next) => {
   }
  };
 
-
-
-
-
  module.exports = GlobalError;

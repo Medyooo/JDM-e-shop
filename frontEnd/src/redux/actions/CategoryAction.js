@@ -6,7 +6,6 @@ import { useInsertDataWithImage } from '../../hooks/UseInsertData'
 // Get all categories
 export const GetAllCategory = (limit) => async (dispatch) => {
   try {
-    // const res = await BaseUrl.get('/api/v1/categories')
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const response = await useGetData(`/api/v1/categories?limit=${limit}`)
     dispatch({

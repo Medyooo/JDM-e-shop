@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer, toast } from 'react-toastify'
+
 import Footer from './components/utility/Footer'
 import NavBarLogin from './components/utility/NavBarLogin'
 import HomePage from './pages/home/HomePage'
@@ -28,6 +31,7 @@ function App () {
   return (
     <div>
       <NavBarLogin />
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route index element={<HomePage />} />

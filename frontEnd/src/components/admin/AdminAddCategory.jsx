@@ -1,33 +1,8 @@
-import { Col, Row } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
-
-import avatar from '../../assets/images/avatar.png'
-import { useState } from 'react'
-import { CreateCategory } from '../../redux/actions/CategoryAction'
+import { Col, Row, Spinner } from 'react-bootstrap'
+import addCategoryHook from '../../customHook/category/AddCategoryHook'
 
 const AdminAddCategory = () => {
-  const dispatch = useDispatch()
-  const [img, setImg] = useState(avatar)
-  const [name, setName] = useState('')
-  const [selectedFile, setSelectedFile] = useState(null)
-
-  const onImageChange = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      setImg(URL.createObjectURL(event.target.files[0]))
-      setSelectedFile(event.target.files[0])
-    }
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    const formData = new FormData()
-    formData.append('name', name)
-    formData.append('image', selectedFile)
-
-    dispatch(CreateCategory(formData))
-  }
-
+  const [img, name, loading, isPress, handleSubmit, onImageChange,onChangeName] = addCategoryHook()
   return (
     <div>
       <Row className='justify-content-start mt-3 '>
@@ -46,7 +21,7 @@ const AdminAddCategory = () => {
             type='text'
             className='input-form d-block mt-3 px-3'
             placeholder='Nom de la catégorie'
-            onChange={(e) => setName(e.target.value)}
+            onChange={onChangeName}
             value={name}
           />
         </Col>
@@ -56,6 +31,14 @@ const AdminAddCategory = () => {
           <button className='btn-a d-inline mt-2 pe-5 ps-5 ' style={{ fontSize: '20px' }} onClick={handleSubmit}>Ajouter</button>
         </Col>
       </Row>
+      {
+        isPress
+          ? loading
+            ? <Spinner animation='border' variant='warning' />
+            : <h4>Enregistrement effectué</h4>
+          : null
+
+      }
     </div>
   )
 }

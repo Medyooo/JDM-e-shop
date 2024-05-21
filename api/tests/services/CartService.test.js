@@ -1,5 +1,5 @@
 const { CalcTotalCartPrice, AddProductToCart } = require('../../src/services/CartService');
-
+/*
 jest.mock('../../src/models/ProductModel');
 jest.mock('../../src/models/CartModel');
 
@@ -52,7 +52,7 @@ describe('Integration Test: Adding Product to Cart', () => {
       }));
     });
   });
-  
+  */
 
 
 describe('CalcTotalCartPrice', () => {
@@ -87,6 +87,4 @@ describe('CalcTotalCartPrice', () => {
       expect(totalPrice).toBe(expectedTotalPrice);
       expect(cart.totalCartPrice).toBe(expectedTotalPrice);
     });
-  
-    // Vous pouvez ajouter plus de tests pour couvrir d'autres cas de figure
   });

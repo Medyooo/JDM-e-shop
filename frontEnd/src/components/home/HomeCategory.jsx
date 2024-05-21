@@ -1,23 +1,11 @@
 import { Container, Row, Spinner } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
 
 import SubTitle from '../utility/SubTitle'
 import CategoryCard from '../category/CategoryCard'
-import { GetAllCategory } from '../../redux/actions/CategoryAction'
-import { useEffect } from 'react'
+import HomeCategoryHook from '../../customHook/category/HomeCategoryHook'
 
 const HomeCategory = () => {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(GetAllCategory())
-  }, [])
-
-  const category = useSelector(state => state.allCategory.category)
-  const loading = useSelector(state => state.allCategory.loading)
-
-  console.log(category.data)
-  console.log(loading)
+  const [category, loading] = HomeCategoryHook()
   return (
     <Container>
       <SubTitle title='Categories' btntitle='Voir Plus' pathText='/allcategory' />
